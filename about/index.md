@@ -1,12 +1,26 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+title: About Me
+tags: [about]
+date: 2018-06-12
 comments: false
 ---
-    
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
+
+Hey, my friend! I'm <b>Yimeng</b>.
+
+I grew up in Beijing. 
+Then I went to The University of Maryland for my undergraduate degree in Computer Engineering. 
+I'm currently a Computer Science Master student in Cornell Tech.
+
+My passion in Web development makes me focus on my study and work everyday.
+My interests in other fields, like bussiness, urban planning and architecture, motivates me to keep exploring the outside world.
+
+In addition, I'm a crazy fan of Football (the real one) and some Japanese bands.
+
+Welcome to my blog site. It is built with <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://www.jekyll.com/">Jekyll</a>. You are very welcome to share ideas and leave comments under any post.
+
+Nice to Meet You!
+
 
 ## Features
 * Minimal, you can focus on your content
