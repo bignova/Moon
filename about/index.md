@@ -6,20 +6,23 @@ date: 2018-06-12
 comments: false
 ---
 
-Hello, I'm <b>Yimeng</b>, from Beijing.
+Hello,
 
-I'm currently a Computer Science Master student in Cornell Tech.
+This is <b>Yimeng</b> from Beijing, China.
 
-After 4-years undergraduate study in the University of Maryland, I was motivated by the passion in Web Development and decided to come to Cornell Tech for the Computer Science Master degree.
+I'm currently a Computer Science graduate student at Cornell Tech.
 
-My passion in Web development makes me focus on my study and work everyday.
-My interests in other fields, like bussiness, urban planning and architecture, motivates me to keep exploring the outside world.
+After 4-years of study at the University of Maryland, I realized that Web Development is the thing that I’m most passionate about.
 
-In addition, I'm a crazy fan of Football (the real one) and some Japanese bands.
+My wide range of interests in business, urban planning, and architecture stimulates me to keep exploring various possibilities.
+
+In addition, I’m an enthusiastic fan of FOOTBALL (the real one) and some Japanese bands.
 
 Welcome to my blog site. It is built with <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://www.jekyll.com/">Jekyll</a>. You are very welcome to share ideas and leave comments under any post.
 
-Nice to Meet You!
+<blockquote><p>
+    Revolution starts with a blank sheet.
+    </p></blockquote>
 
 
 ## Features
