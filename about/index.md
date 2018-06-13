@@ -6,11 +6,11 @@ date: 2018-06-12
 comments: false
 ---
 
-Hey, my friend! I'm <b>Yimeng</b>.
+Hello, I'm <b>Yimeng</b>, from Beijing.
 
-I grew up in Beijing. 
-Then I went to The University of Maryland for my undergraduate degree in Computer Engineering. 
 I'm currently a Computer Science Master student in Cornell Tech.
+
+After 4-years undergraduate study in the University of Maryland, I was motivated by the passion in Web Development and decided to come to Cornell Tech for the Computer Science Master degree.
 
 My passion in Web development makes me focus on my study and work everyday.
 My interests in other fields, like bussiness, urban planning and architecture, motivates me to keep exploring the outside world.
