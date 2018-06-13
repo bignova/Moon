@@ -23,7 +23,6 @@ Welcome to my blog site. It is built with <a href="https://pages.github.com/">Gi
 
 > <b><i>"Revolution starts with a blank sheet too."</i></b>
 
-{% capture images %}
-    https://user-images.githubusercontent.com/11435445/41336095-bc6de416-6f1d-11e8-82ce-57709a57b3af.jpg
-{% endcapture %}
-{% include gallery images=images caption="a cool boy" cols=1 %}
+<figure>
+	<img src="https://user-images.githubusercontent.com/11435445/41336095-bc6de416-6f1d-11e8-82ce-57709a57b3af.jpg" alt="Cannot see this cool boy?" width="300" height="300">
+</figure>
