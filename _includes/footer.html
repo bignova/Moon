@@ -1,11 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
 
-<div class="aplayer"
-    data-id="35558358"
-    data-server="netease"
-    data-type="album"
-    data-fixed="true">
-</div>
+{% for music in site.data.playlist %}
+    {% assign id = music.id %}
+    {% assign type = music.type %}
+    <div class="aplayer"
+        data-id="{{ id }}"
+        data-server="netease"
+        data-type="{{ type }}"
+        data-fixed="true">
+    </div>
+{% endfor %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
