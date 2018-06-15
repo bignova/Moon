@@ -11,5 +11,23 @@
     </div>
 {% endfor %}
 
+<style type="text/css">
+    .aplayer{
+        background-color: #f8f8f285;
+    }
+    .aplayer-list-light{
+        background-color: -webkit-gradient(linear, left top, left bottom);  
+        -webkit-animation-timing-function: ease-in-out;  
+        -webkit-animation-name: breathe;  
+        -webkit-animation-duration: 2500ms;  
+        -webkit-animation-iteration-count: infinite;  
+        -webkit-animation-direction: alternate;  
+    }
+    @-webkit-keyframes breathe {  
+        0% { opacity: 1; box-shadow:0 1px 2px rgba(255,255,255,0.1);}  
+        100% { opacity: 1; box-shadow:0 1px 30px rgba(16,50,73,1);}  
+    }  
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
