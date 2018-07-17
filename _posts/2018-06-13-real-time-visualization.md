@@ -2,12 +2,12 @@
 layout: post
 title: "实时数据可视化平台"
 date: 2018-06-13
-excerpt: "Examples and code for displaying images in posts."
+excerpt: "Real-time Data Visualization Solutions"
 tags: [Tech, Analysis, 技术, 分析]
 comments: true
 ---
 
-实时可视化框架 - <a href="https://bignova.github.io/viztool/">Viztool</a>, 是我在本科的Software Engineering课上的小组project。一个学期下来，与之相关的研究也做了不少。这篇文章就来整理一下有关于“实时可视化”的方方面面。
+实时可视化框架 - <a href="https://bignova.github.io/viztool/">Viztool</a>, 是我在本科的Software Engineering课上的小组project。一个学期下来，与之相关的研究也做了不少。
 
 ## 概念
 
