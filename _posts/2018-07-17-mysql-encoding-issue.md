@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "MySQL Encoding Issue (utf8)"
+title: "MySQL Encoding Issue (Latin-1 to UTF-8)"
 date: 2018-07-17
-excerpt: "Switching MySQL encoding format to UTF-8 to allow chinese characters"
+excerpt: "Switching MySQL encoding format from Latin-1 to UTF-8"
 tags: [Debug]
 comments: true
 ---
