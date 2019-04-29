@@ -55,28 +55,28 @@ In order to get the odometry, some config data of the robot and lidar needs to b
 
 $$Vehicle Width = \frac{(Inner Width + Outer Width)}{2} = \frac{(311.15 + 476.25)}{2}$$
 
-$Wheel Perimeter = \pi \cdot d_w = \pi \cdot 254.0$
+$$Wheel Perimeter = \pi \cdot d_w = \pi \cdot 254.0$$
 
-$Dist Per Count = \frac{Wheel Perimeter}{360}$
+$$Dist Per Count = \frac{Wheel Perimeter}{360}$$
 
-Say $f_r^i, f_l^i, r_r^i, r_l^i$ as the accumulated counts at sample i, the travel distance
+Say $$f_r^i, f_l^i, r_r^i, r_l^i$$ as the accumulated counts at sample i, the travel distance
 ∆s could be calculated as the following,
 
-$\Delta s_{r}^i = \frac{(f_r^i - f_r^{i-1}) + (r_r^i - r_r^{i-1})}{2}$
+$$\Delta s_{r}^i = \frac{(f_r^i - f_r^{i-1}) + (r_r^i - r_r^{i-1})}{2}$$
 
-$\Delta s_{l}^i = \frac{(f_l^i - f_l^{i-1}) + (r_l^i - r_l^{i-1})}{2}$
+$$\Delta s_{l}^i = \frac{(f_l^i - f_l^{i-1}) + (r_l^i - r_l^{i-1})}{2}$$
 
-$\Delta s^i = \frac{\Delta s_{r}^i+\Delta s_{l}^i}{2}$
+$$\Delta s^i = \frac{\Delta s_{r}^i+\Delta s_{l}^i}{2}$$
 
-The sheer angle $\Delta \theta$ and the decomposing distance of $\Delta s$ on it, $\Delta x$ and $\Delta y$ could then be represented as the following,
+The sheer angle $$\Delta \theta$$ and the decomposing distance of $$\Delta s$$ on it, $$\Delta x$$ and $$\Delta y$$ could then be represented as the following,
 
-$\Delta \theta^i = \frac{\Delta s_{r}^i - \Delta s_{l}^i}{1.85 \cdot Wheel Width}$
+$$\Delta \theta^i = \frac{\Delta s_{r}^i - \Delta s_{l}^i}{1.85 \cdot Wheel Width}$$
 
-$\Delta x^i = \Delta s^i cos(\Delta \theta^{i-1} + \frac{\Delta \theta^i}{2})$
+$$\Delta x^i = \Delta s^i cos(\Delta \theta^{i-1} + \frac{\Delta \theta^i}{2})$$
 
-$\Delta y^i = \Delta s^i sin(\Delta \theta^{i-1} + \frac{\Delta \theta^i}{2})$
+$$\Delta y^i = \Delta s^i sin(\Delta \theta^{i-1} + \frac{\Delta \theta^i}{2})$$
 
-Then, the following odometry of the robot over the entire data set could be plotted using $\Delta x$ and $\Delta y$
+Then, the following odometry of the robot over the entire data set could be plotted using $$\Delta x$$ and $$\Delta y$$
 
 ![Odometry Results](https://user-images.githubusercontent.com/11435445/56914786-fcbc4380-6a82-11e9-92f3-0c21e487a4cf.png)
 *Figure 4: Odometry Results: 3D(x,y vs. time) and 2D(x,y)*
@@ -89,33 +89,31 @@ The procedure of particle filter based localization is the following,
 2. For each sample, update the particles witodometry data and add noise
 3. Comparing correlation with the map at the currenposes, and re-weight the particles according to theicorrelation
 4. Comparing correlation with the map at the currenposes, and re-weight the particles according to theicorrelation
-5. Calculate the number of particles which has weight greater than a threshold $th_w$ and if thinumber if less than $\alpha N$, then re-sample accordinto their weights
+5. Calculate the number of particles which has weight greater than a threshold $$th_w$$ and if thinumber if less than $$\alpha N$$, then re-sample accordinto their weights
 6. Update the map based on the particle with thlargest weight using the lidar's data
 7. Repeat
 
 In this implementation, some of the above parameters are set as the following,
 
-Number of Particles: $N = 30$
+Number of Particles: $$N = 30$$
 
-Particle Resample Threshold: $th_w = 30$, $\alpha = 0.5$
+Particle Resample Threshold: $$th_w = 30$$, $$\alpha = 0.5$$
 
 ### Occupancy Grid Mapping
 
-The occupancy grid ($m_{x,y}$) is a map representing the likelihood of whether the position x, y is occupied or free by accumulating the measurement $(z = 1,−1)$’s log-odd as follows:
+The occupancy grid ($$m_{x,y}$$) is a map representing the likelihood of whether the position x, y is occupied or free by accumulating the measurement $$(z = 1,−1)$$’s log-odd as follows:
 
-$\begin{aligned} \operatorname{log odd} &=\log \frac{p(z | m_{x, y}=1) p\left(m_{x, y}=1\right)}{p(z | m_{x, y}=0) p\left(m_{x, y}=0\right)}=\log \frac{p(z | m_{x, y}=1)}{p(z | m_{x, y}=0)}+\log \frac{p\left(m_{x, y}=1\right)}{p\left(m_{x, y}=0\right)} \end{aligned}$
+$$\begin{aligned} \operatorname{log odd} &=\log \frac{p(z | m_{x, y}=1) p\left(m_{x, y}=1\right)}{p(z | m_{x, y}=0) p\left(m_{x, y}=0\right)}=\log \frac{p(z | m_{x, y}=1)}{p(z | m_{x, y}=0)}+\log \frac{p\left(m_{x, y}=1\right)}{p\left(m_{x, y}=0\right)} \end{aligned}$$
 
-$\operatorname{logodd}_{occ}=\log \frac{p(z=1 | m_{x y}=1)}{p(z=1 | m_{x y}=0)}$
+$$\operatorname{logodd}_{occ}=\log \frac{p(z=1 | m_{x y}=1)}{p(z=1 | m_{x y}=0)}$$
 
-$\operatorname{logodd}_{free} =\log \frac{p(z=-1 | m_{x y}=0)}{p(z=-1 | m_{x,y}=1)}$
+$$\operatorname{logodd}_{free} =\log \frac{p(z=-1 | m_{x y}=0)}{p(z=-1 | m_{x,y}=1)}$$
 
-$\operatorname{logodd}=\left\{\begin{array}{ll}{\text {logodd}+\text {logodd}_{\text {occ}},} & {\text { if } z=1} \\ {\text {logodd}+\text {logodd}_{\text {free}},} & {\text { if } z=-1}\end{array}\right.$
+$$\operatorname{logodd}=\left\{\begin{array}{ll}{\text {logodd}+\text {logodd}_{\text {occ}},} & {\text { if } z=1} \\ {\text {logodd}+\text {logodd}_{\text {free}},} & {\text { if } z=-1}\end{array}\right.$$
 
 ## Results
 
 For each map, two maps are plotted for comparison. The LHS is mapping with odometry only. The RHS is the result after introducing particle filter.
-
-
 
 ## Discussions
 
