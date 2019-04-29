@@ -115,6 +115,21 @@ $$\operatorname{logodd}=\left\{\begin{array}{ll}{\text {logodd}+\text {logodd}_{
 
 For each map, two maps are plotted for comparison. The LHS is mapping with odometry only. The RHS is the result after introducing particle filter.
 
+### Training Data
+
+| Odometry Only | Odometry + Particle Filter | GIF |
+| ----------- | ----------- | ----------- |
+| ![odometry20](https://user-images.githubusercontent.com/11435445/56919097-b7e9da00-6a8d-11e9-8eef-0d0a4e5addd6.png) | ![pf20](https://user-images.githubusercontent.com/11435445/56919126-ccc66d80-6a8d-11e9-9e92-e5c514e9ef28.png) | ![map20](https://user-images.githubusercontent.com/11435445/56919152-dc45b680-6a8d-11e9-9089-e9c9b499dd18.gif)
+| ![odometry21](https://user-images.githubusercontent.com/11435445/56919196-00a19300-6a8e-11e9-8134-65547f914c28.png) | ![pf21](https://user-images.githubusercontent.com/11435445/56919228-12833600-6a8e-11e9-9157-69479631caa2.png) | ![map21](https://user-images.githubusercontent.com/11435445/56919275-3181c800-6a8e-11e9-8ecf-6edc41c1079b.gif)
+| ![odometry23](https://user-images.githubusercontent.com/11435445/56919683-414ddc00-6a8f-11e9-9bf3-f928e8d071e3.png) |![pf23](https://user-images.githubusercontent.com/11435445/56919688-44e16300-6a8f-11e9-9d46-ea3c4798772b.png) | ![map23](https://user-images.githubusercontent.com/11435445/56919703-4ad74400-6a8f-11e9-8b2f-e6adda1e0a03.gif)
+
+### Test Data
+
+| Odometry Only | Odometry + Particle Filter | GIF |
+| ----------- | ----------- | ----------- |
+| ![odometry22](https://user-images.githubusercontent.com/11435445/56919593-fcc24080-6a8e-11e9-833d-2e95a8b1d1bb.png) | ![pf22](https://user-images.githubusercontent.com/11435445/56919602-ffbd3100-6a8e-11e9-9ef8-c9f53833a0ee.png) | ![map22](https://user-images.githubusercontent.com/11435445/56919607-02b82180-6a8f-11e9-8697-d7884a189da7.gif)
+| ![odometry24](https://user-images.githubusercontent.com/11435445/56919748-693d3f80-6a8f-11e9-82c2-118ae4bf239b.png) | ![pf24](https://user-images.githubusercontent.com/11435445/56919753-6b9f9980-6a8f-11e9-90f5-b7df28cdacb7.png) | ![map24](https://user-images.githubusercontent.com/11435445/56919755-6d695d00-6a8f-11e9-868b-0527f2c17aa6.gif)
+
 ## Discussions
 
 It could be seen that there is a huge improvement on the quality of mapping after using particle filer for localization. The improvement could be simply explained as the following.
