@@ -12,12 +12,6 @@ This is <b>Yimeng</b> from Beijing, China.
 
 I'm currently a Computer Science graduate student at Cornell Tech.
 
-After 4-years of study at the University of Maryland, I realized that Web Development is the thing that I’m most passionate about.
-
-My wide range of interests in business, urban planning, and architecture stimulates me to keep exploring various possibilities.
-
-In addition, I’m an enthusiastic fan of FOOTBALL (the real one) and a few Japanese bands.
-
 Welcome to my blog site. It is built with <a href="https://pages.github.com/">GitHub Pages</a> and <a href="https://www.jekyll.com/">Jekyll</a>. You are very welcome to share ideas and leave comments under any post.
 
 <figure>
