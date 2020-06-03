@@ -15,7 +15,7 @@ comments: true
 
 ![](http://rsarxiv.github.io/2017/03/02/PaperWeekly%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E6%9C%9F/media/14884595350366.jpg)
 
-在实际训练的过程中出现了一个很严重的问题：KL-vanishing。LSTM作为decoder本身具有强大的reconstruct能力，并且对于输入的hidden state的变化非常敏感。因此在训练阶段模型会倾向于将encode出的posterior $$q(z \mid x)$$完全等于prior $$p(z)$$，让KL项迅速降为0。同时decoder在忽略hidden state $$z$$情况下，单独依靠decoder的输入token优化reconstruct error项。模型退化成为一个non-generative RNNLM。
+在实际训练的过程中出现了一个很严重的问题：KL-vanishing。LSTM作为decoder本身具有强大的reconstruct能力，并且对于输入的hidden state的变化非常敏感。因此在训练阶段模型会倾向于将encode出的posterior完全等于prior，让KL项迅速降为0。同时decoder在忽略hidden state $$z$$情况下，单独依靠decoder的输入token优化reconstruct error项。模型退化成为一个non-generative RNNLM。
 
 针对这个问题，文章提出了两种办法：
 
