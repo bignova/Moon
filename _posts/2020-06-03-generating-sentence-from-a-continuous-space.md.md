@@ -10,6 +10,7 @@ comments: true
 **Generating Sentences from a Continuous Space**, SR Bowman et al. 
 
 [`Paper`](https://arxiv.org/abs/1511.06349)
+[`Code`](https://github.com/timbmg/Sentence-VAE)
 
 相比于传统的RNNLM，VAE学出来的latent space可以保证一定的regularity，并且是“global latent representation of sentence content"。从这点motivation出发，作者采用了一个VAE+LSTM的结构，loss的组成还是vanilla vae的loss。
 
