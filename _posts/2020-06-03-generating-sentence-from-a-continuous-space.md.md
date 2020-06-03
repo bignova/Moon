@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "【PR】Generating Sentences from a Continuous Space"
-date: 2020-05-28
+date: 2020-06-03
 excerpt: "Paper Reading"
 tags: [Paper, Generative Model]
 comments: true
