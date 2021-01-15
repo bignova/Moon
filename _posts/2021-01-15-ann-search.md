@@ -23,7 +23,7 @@ comments: true
   - Inner Product - Recommendation
   - Hamming Distance - Video
 - **基本逻辑：brute-force搜索的方式是在全空间进行搜索，为了加快查找的速度，几乎所有的ANNS方法都是通过对全空间分割，将其分割成很多小的子空间，在搜索的时候，通过某种方式，快速锁定在某一（几）子空间，然后在该（几个）子空间里做遍历**。
-- ![CVPR20 Tutorial] Billion-scale Approximate Nearest Neighbor Search -  Speaker Deck](https://files.speakerdeck.com/presentations/41f78b1009374387ba1ec10952921747/slide_6.jpg)
+- ![CVPR20 Tutorial Billion-scale Approximate Nearest Neighbor Search -  Speaker Deck](https://files.speakerdeck.com/presentations/41f78b1009374387ba1ec10952921747/slide_6.jpg)
 
 
 
