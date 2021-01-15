@@ -3,7 +3,7 @@ layout: post
 title: "ANN Search Algorithms"
 date: 2021-01-15
 excerpt: "An Introduction to ANN Search Algorithms"
-tags: [Startup]
+tags: [Research, Algorithms]
 comments: true
 ---
 
